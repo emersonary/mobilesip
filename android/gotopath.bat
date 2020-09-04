@@ -1,0 +1,1 @@
+cd C:\Users\Administrator\Dropbox\Delphi7\SIPMobile\android
