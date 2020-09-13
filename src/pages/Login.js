@@ -176,11 +176,16 @@ export default class Login extends Component {
                   onPress={this.handleResset}
                 />
               ) : (
-                <PinUpdate
-                  onPress={this.handleResset}
-                  iduser={this.state.response.iduser}
-                  iddevice={this.state.response.iddevice}
-                />
+                <KeyboardAvoidingView
+                  behavior={Platform.OS === 'ios' ? 'padding' : null}
+                  enabled
+                  keyboardVerticalOffset="100">
+                  <PinUpdate
+                    onPress={this.handleResset}
+                    iduser={this.state.response.iduser}
+                    iddevice={this.state.response.iddevice}
+                  />
+                </KeyboardAvoidingView>
               )
             ) : (
               <LoginError
